@@ -13,7 +13,7 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author ruben
+ * @author Usuario
  */
 public class AspiranteModel extends AbstractTableModel{
     private Database db = new Database();
@@ -43,6 +43,7 @@ public class AspiranteModel extends AbstractTableModel{
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Aspirante aspirante = data.get(rowIndex);
+        /*
         switch(columnIndex){
             case 0:
                 return aspirante.getNombre();
@@ -51,7 +52,7 @@ public class AspiranteModel extends AbstractTableModel{
                 String escuela = "";
                 
                 try {
-                    escuela = db.leearNombreEscuela(id_escuela);
+                    escuela = db.leerNombreEscuela(id_escuela);
                 } catch (SQLException ex) {
                     Logger.getLogger(AspiranteModel.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -65,28 +66,12 @@ public class AspiranteModel extends AbstractTableModel{
                 return aspirante.getFacebook();
             default:
                 return "";
-        }
+        }*/
+        return null;                
     }
 
     @Override
     public String getColumnName(int column) {
         return columns[column];
-    }
-
-    public Aspirante getAspirante(int row) {
-        return data.get(row);
-    }
-    
-    public void agregar(Aspirante aspirante){
-        data.add(aspirante);
-        fireTableDataChanged();
-    }
-    
-    public int eliminar(int row){
-        int id = data.get(row).getId();
-        data.remove(row);
-        fireTableDataChanged();
-        
-        return id;
     }
 }

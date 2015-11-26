@@ -32,48 +32,64 @@ public class MainFrame extends javax.swing.JFrame {
 
         dialogoEscuela = new javax.swing.JDialog();
         nombreEscuela = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        botonGuardarEscuela = new javax.swing.JButton();
+        botonCancelarEscuela = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         dialogoAspirante = new javax.swing.JDialog();
-        jButton2 = new javax.swing.JButton();
-        nombreAspirante = new javax.swing.JTextField();
-        telefonoAspirante = new javax.swing.JTextField();
+        botonGuardarAspirante = new javax.swing.JButton();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         escuelaAspirante = new javax.swing.JComboBox();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        botonCancelarAspirante = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaAspirantes = new javax.swing.JTable();
 
-        jButton1.setText("Guardar");
+        dialogoEscuela.setTitle("Registrar nueva escuela");
+        dialogoEscuela.setResizable(false);
+
+        botonGuardarEscuela.setText("Guardar");
+
+        botonCancelarEscuela.setText("Cancelar");
+
+        jLabel6.setText("Nombre");
 
         javax.swing.GroupLayout dialogoEscuelaLayout = new javax.swing.GroupLayout(dialogoEscuela.getContentPane());
         dialogoEscuela.getContentPane().setLayout(dialogoEscuelaLayout);
         dialogoEscuelaLayout.setHorizontalGroup(
             dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogoEscuelaLayout.createSequentialGroup()
-                .addGroup(dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoEscuelaLayout.createSequentialGroup()
+                .addGroup(dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(dialogoEscuelaLayout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(nombreEscuela, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(175, Short.MAX_VALUE)
+                        .addComponent(botonGuardarEscuela)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonCancelarEscuela))
                     .addGroup(dialogoEscuelaLayout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(jButton1)))
-                .addContainerGap(153, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nombreEscuela)))
+                .addGap(28, 28, 28))
         );
         dialogoEscuelaLayout.setVerticalGroup(
             dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dialogoEscuelaLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(nombreEscuela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(40, 40, 40))
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addGroup(dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nombreEscuela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(35, 35, 35)
+                .addGroup(dialogoEscuelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonGuardarEscuela)
+                    .addComponent(botonCancelarEscuela))
+                .addGap(32, 32, 32))
         );
 
         dialogoAspirante.setTitle("Registrar aspirante");
@@ -84,14 +100,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Guardar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonGuardarAspirante.setText("Guardar");
+        botonGuardarAspirante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonGuardarAspiranteActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Cancelar");
+        botonCancelarAspirante.setText("Cancelar");
 
         jLabel1.setText("Nombre");
 
@@ -121,15 +137,15 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(telefonoAspirante, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nombreAspirante, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(escuelaAspirante, 0, 289, Short.MAX_VALUE))
                 .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoAspiranteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(botonGuardarAspirante)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(botonCancelarAspirante)
                 .addGap(20, 20, 20))
         );
         dialogoAspiranteLayout.setVerticalGroup(
@@ -137,11 +153,11 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoAspiranteLayout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreAspirante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telefonoAspirante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -157,8 +173,8 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(28, 28, 28)
                 .addGroup(dialogoAspiranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                    .addComponent(botonGuardarAspirante)
+                    .addComponent(botonCancelarAspirante))
                 .addGap(14, 14, 14))
         );
 
@@ -167,13 +183,6 @@ public class MainFrame extends javax.swing.JFrame {
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 cargarTablaAspirantes(evt);
-            }
-        });
-
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -194,17 +203,13 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 852, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 852, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jButton3)
-                .addGap(33, 33, 33)
+                .addGap(82, 82, 82)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
@@ -213,28 +218,16 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void llenarComboEscuelas(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_llenarComboEscuelas
-        // TODO add your handling code here:
         escuelaAspirante.removeAllItems();
         controlador.llenarComboEscuelas(escuelaAspirante);
     }//GEN-LAST:event_llenarComboEscuelas
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        dialogoAspirante.pack();
-        dialogoAspirante.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        String nombre = "juan";
-        String telefono = "123321123";
-        String email = "jaun@hotmail.com";
-        Escuela escuela = (Escuela) escuelaAspirante.getSelectedItem();
-        int id_escuela = escuela.getId();
+    private void botonGuardarAspiranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarAspiranteActionPerformed
         
-        controlador.guardarAspirante(nombre, telefono, email, id_escuela);
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+        /*Escuela escuela = (Escuela) escuelaAspirante.getSelectedItem();
+        int id_escuela = escuela.getId();*/        
+               
+    }//GEN-LAST:event_botonGuardarAspiranteActionPerformed
 
     private void cargarTablaAspirantes(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_cargarTablaAspirantes
         
@@ -277,24 +270,25 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCancelarAspirante;
+    private javax.swing.JButton botonCancelarEscuela;
+    private javax.swing.JButton botonGuardarAspirante;
+    private javax.swing.JButton botonGuardarEscuela;
     private javax.swing.JDialog dialogoAspirante;
     private javax.swing.JDialog dialogoEscuela;
     private javax.swing.JComboBox escuelaAspirante;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField nombreAspirante;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField nombreEscuela;
     private javax.swing.JTable tablaAspirantes;
-    private javax.swing.JTextField telefonoAspirante;
     // End of variables declaration//GEN-END:variables
 }

@@ -19,7 +19,7 @@ import model.Escuela;
 
 /**
  *
- * @author ruben
+ * @author Usuario
  */
 public class Controller {
     private Database db = new Database();
@@ -45,16 +45,7 @@ public class Controller {
     }
     
     public void guardarAspirante(String nombre, String telefono, String email, int id_escuela){
-        //int id_escuela = escuela.getId();
-        
-        Aspirante aspirante = new Aspirante(-1, nombre, telefono, email, "face", id_escuela);
-        
-        try {
-            db.guardarAspirante(aspirante);
-        } catch (SQLException ex) {
-            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+                
     }
     
     public void cargarTablaAspirantes(JTable tabla){
@@ -62,7 +53,7 @@ public class Controller {
         ArrayList<Aspirante> listaEscuelas = null;
         
         try {
-            listaEscuelas = db.seleccionarAspirantes();
+            listaEscuelas = db.leerAspirantes();
         } catch (SQLException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
